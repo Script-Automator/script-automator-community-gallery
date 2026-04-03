@@ -1,0 +1,97 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install validation tools
+      run: npm install -g ajv-cli
+
+    - name: Detect changed script folders
+      id: changes
+      run: |
+        CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep '^scripts/' | cut -d'/' -f1-3 | sort -u)
+        echo "changed_dirs=$CHANGED" >> $GITHUB_OUTPUT
+        echo "Changed script directories:"
+        echo "$CHANGED"
+
+    - name: Validate metadata.json schema
+      run: |
+        for f in scripts/*/*/metadata.json; do
+          if [ -f "$f" ]; then
+            echo "Validating $f"
+            ajv validate -s metadata.schema.json -d "$f" || exit 1
+          fi
+        done
+
+    - name: Check script file size (max 50KB)
+      run: |
+        for f in scripts/*/*/*.js; do
+          if [ -f "$f" ]; then
+            SIZE=$(wc -c < "$f" | tr -d ' ')
+            if [ "$SIZE" -gt 51200 ]; then
+              echo "❌ FAIL: $f is ${SIZE} bytes (max 50KB)"
+              exit 1
+            fi
+            echo "✅ $f — ${SIZE} bytes"
+          fi
+        done
+
+    - name: Check for banned patterns
+      run: |
+        BANNED_PATTERNS="localhost|127\.0\.0\.1|192\.168\.|10\.\d+\.\d+|eval\(|new Function\("
+        EXIT_CODE=0
+        for f in scripts/*/*/*.js; do
+          if [ -f "$f" ]; then
+            if grep -Pn "$BANNED_PATTERNS" "$f"; then
+              echo "❌ SECURITY: Banned pattern found in $f"
+              EXIT_CODE=1
+            fi
+          fi
+        done
+        exit $EXIT_CODE
+
+    - name: Verify renderWidget() call exists
+      run: |
+        EXIT_CODE=0
+        for f in scripts/*/*/*.js; do
+          if [ -f "$f" ]; then
+            if ! grep -q "renderWidget" "$f"; then
+              echo "⚠️ WARNING: $f does not call renderWidget()"
+              EXIT_CODE=1
+            fi
+          fi
+        done
+        exit $EXIT_CODE
+
+    - name: Check unique script IDs
+      run: |
+        IDS=$(cat scripts/*/*/metadata.json 2>/dev/null | jq -r '.id' | sort)
+        DUPES=$(echo "$IDS" | uniq -d)
+        if [ -n "$DUPES" ]; then
+          echo "❌ Duplicate script IDs found:"
+          echo "$DUPES"
+          exit 1
+        fi
+        echo "✅ All script IDs are unique"
+
+    - name: Dry-run index build
+      run: node scripts/build_index.js
+
+    - name: Verify index.json is valid JSON array
+      run: jq -e 'type == "array"' index.json > /dev/null || (echo "❌ index.json is invalid" && exit 1)

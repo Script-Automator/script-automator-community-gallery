@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "name", "description", "author", "version", "category", "icon", "widgetFamilies"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$" },
+    "name": { "type": "string", "minLength": 3, "maxLength": 50 },
+    "description": { "type": "string", "minLength": 10, "maxLength": 280 },
+    "author": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "category": { "type": "string", "enum": ["Weather", "Finance", "Utilities", "Productivity", "AI", "Games"] },
+    "icon": { "type": "string" },
+    "widgetFamilies": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["small", "medium", "large", "extraLarge", "accessory"] },
+      "minItems": 1
+    }
+  }
+}

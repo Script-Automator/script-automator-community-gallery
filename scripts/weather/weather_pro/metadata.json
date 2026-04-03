@@ -1,0 +1,18 @@
+{
+  "id": "weather_pro_v2",
+  "name": "Weather Pro",
+  "description": "Beautiful weather widget with live gradients, temperature, humidity, and wind speed display.",
+  "author": "Antigravity Team",
+  "authorUrl": "https://github.com/script-automator-community",
+  "version": "2.0.1",
+  "category": "Weather",
+  "icon": "cloud.sun.fill",
+  "tags": ["weather", "gradient", "live-data", "temperature"],
+  "widgetFamilies": ["small", "medium", "large"],
+  "minAppVersion": "1.0.0",
+  "license": "MIT",
+  "screenshots": [],
+  "isFeatured": true,
+  "createdAt": "2026-01-15T00:00:00Z",
+  "updatedAt": "2026-04-01T00:00:00Z"
+}

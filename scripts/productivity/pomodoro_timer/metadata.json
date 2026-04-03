@@ -1,0 +1,18 @@
+{
+  "id": "pomodoro_timer",
+  "name": "Pomodoro Focus Timer",
+  "description": "Minimal pomodoro timer showing focus/break mode with progress bar.",
+  "author": "Antigravity Team",
+  "authorUrl": "https://github.com/script-automator-community",
+  "version": "1.0.0",
+  "category": "Productivity",
+  "icon": "flame.fill",
+  "tags": ["pomodoro", "timer", "focus", "productivity"],
+  "widgetFamilies": ["small", "medium"],
+  "minAppVersion": "1.0.0",
+  "license": "MIT",
+  "screenshots": [],
+  "isFeatured": false,
+  "createdAt": "2026-03-20T00:00:00Z",
+  "updatedAt": "2026-04-01T00:00:00Z"
+}

@@ -1,0 +1,52 @@
+name: Build Gallery Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+  pull_request:
+    paths:
+      - 'scripts/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Validate metadata schemas
+      run: |
+        npm install -g ajv-cli
+        for f in scripts/*/*/metadata.json; do
+          if [ -f "$f" ]; then
+            echo "Validating $f"
+            ajv validate -s metadata.schema.json -d "$f" || exit 1
+          fi
+        done
+        
+    - name: Run Build Script
+      run: node scripts/build_index.js
+      
+    - name: Fail if malformed JSON array
+      run: |
+        jq -e 'type == "array"' index.json > /dev/null || (echo "index.json is invalid" && exit 1)
+      
+    - name: Commit changes (if any)
+      if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add index.json
+        # Only commit if there are changes
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update index.json [skip ci]" && git push)

@@ -1,0 +1,18 @@
+{
+  "id": "crypto_portfolio_tracker",
+  "name": "Crypto Portfolio",
+  "description": "Track Bitcoin and Ethereum prices with a clean dark-mode widget.",
+  "author": "CryptoDevs",
+  "authorUrl": "",
+  "version": "1.0.0",
+  "category": "Finance",
+  "icon": "bitcoinsign.circle.fill",
+  "tags": ["crypto", "bitcoin", "ethereum", "portfolio", "finance"],
+  "widgetFamilies": ["small", "medium"],
+  "minAppVersion": "1.0.0",
+  "license": "MIT",
+  "screenshots": [],
+  "isFeatured": false,
+  "createdAt": "2026-03-01T00:00:00Z",
+  "updatedAt": "2026-04-01T00:00:00Z"
+}

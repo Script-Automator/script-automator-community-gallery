@@ -1,0 +1,18 @@
+{
+  "id": "daily_quotes",
+  "name": "Daily Quotes",
+  "description": "Inspirational quote widget that changes every day with a curated collection.",
+  "author": "Antigravity Team",
+  "authorUrl": "https://github.com/script-automator-community",
+  "version": "1.0.0",
+  "category": "Productivity",
+  "icon": "quote.opening",
+  "tags": ["quotes", "motivation", "daily", "inspiration"],
+  "widgetFamilies": ["medium", "large"],
+  "minAppVersion": "1.0.0",
+  "license": "MIT",
+  "screenshots": [],
+  "isFeatured": true,
+  "createdAt": "2026-03-25T00:00:00Z",
+  "updatedAt": "2026-04-01T00:00:00Z"
+}

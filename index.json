@@ -1,0 +1,144 @@
+[
+  {
+    "id": "pomodoro_timer",
+    "name": "Pomodoro Focus Timer",
+    "description": "Minimal pomodoro timer showing focus/break mode with progress bar.",
+    "author": "Antigravity Team",
+    "authorUrl": "https://github.com/script-automator-community",
+    "version": "1.0.0",
+    "category": "Productivity",
+    "icon": "flame.fill",
+    "tags": [
+      "pomodoro",
+      "timer",
+      "focus",
+      "productivity"
+    ],
+    "widgetFamilies": [
+      "small",
+      "medium"
+    ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "isFeatured": false,
+    "createdAt": "2026-03-20T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/productivity/pomodoro_timer/pomodoro_timer.js"
+  },
+  {
+    "id": "daily_quotes",
+    "name": "Daily Quotes",
+    "description": "Inspirational quote widget that changes every day with a curated collection.",
+    "author": "Antigravity Team",
+    "authorUrl": "https://github.com/script-automator-community",
+    "version": "1.0.0",
+    "category": "Productivity",
+    "icon": "quote.opening",
+    "tags": [
+      "quotes",
+      "motivation",
+      "daily",
+      "inspiration"
+    ],
+    "widgetFamilies": [
+      "medium",
+      "large"
+    ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "isFeatured": true,
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/productivity/daily_quotes/daily_quotes.js"
+  },
+  {
+    "id": "countdown_timer",
+    "name": "Event Countdown",
+    "description": "Configurable countdown timer for events, holidays, and deadlines.",
+    "author": "Antigravity Team",
+    "authorUrl": "https://github.com/script-automator-community",
+    "version": "1.0.0",
+    "category": "Utilities",
+    "icon": "timer",
+    "tags": [
+      "countdown",
+      "timer",
+      "event",
+      "date"
+    ],
+    "widgetFamilies": [
+      "small",
+      "medium"
+    ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "isFeatured": false,
+    "createdAt": "2026-03-15T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/utilities/countdown_timer/countdown_timer.js"
+  },
+  {
+    "id": "weather_pro_v2",
+    "name": "Weather Pro",
+    "description": "Beautiful weather widget with live gradients, temperature, humidity, and wind speed display.",
+    "author": "Antigravity",
+    "version": "2.0.1",
+    "category": "Weather",
+    "icon": "cloud.sun.fill",
+    "tags": [
+      "weather",
+      "gradient",
+      "live-data"
+    ],
+    "widgetFamilies": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "isFeatured": true,
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/weather/weather_pro/weather_pro.js"
+  },
+  {
+    "id": "crypto_portfolio_tracker",
+    "name": "Crypto Portfolio",
+    "description": "Track Bitcoin and Ethereum prices with a clean dark-mode widget.",
+    "author": "CryptoDevs",
+    "version": "1.0.0",
+    "category": "Finance",
+    "icon": "bitcoinsign.circle.fill",
+    "tags": [
+      "crypto",
+      "bitcoin",
+      "ethereum"
+    ],
+    "widgetFamilies": [
+      "small",
+      "medium"
+    ],
+    "isFeatured": false,
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/finance/crypto_portfolio/crypto_portfolio.js"
+  },
+  {
+    "id": "system_monitor",
+    "name": "System Monitor",
+    "description": "Display current date, time, OS info on a sleek dark widget.",
+    "author": "Antigravity",
+    "version": "1.5.0",
+    "category": "Utilities",
+    "icon": "gear",
+    "tags": [
+      "system",
+      "device",
+      "time"
+    ],
+    "widgetFamilies": [
+      "small",
+      "medium"
+    ],
+    "isFeatured": false,
+    "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/utilities/system_monitor/system_monitor.js"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "id": "countdown_timer",
+  "name": "Event Countdown",
+  "description": "Configurable countdown timer for events, holidays, and deadlines.",
+  "author": "Antigravity Team",
+  "authorUrl": "https://github.com/script-automator-community",
+  "version": "1.0.0",
+  "category": "Utilities",
+  "icon": "timer",
+  "tags": ["countdown", "timer", "event", "date"],
+  "widgetFamilies": ["small", "medium"],
+  "minAppVersion": "1.0.0",
+  "license": "MIT",
+  "screenshots": [],
+  "isFeatured": false,
+  "createdAt": "2026-03-15T00:00:00Z",
+  "updatedAt": "2026-04-01T00:00:00Z"
+}
