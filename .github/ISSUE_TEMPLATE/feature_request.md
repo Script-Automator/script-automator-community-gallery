@@ -1,25 +1,19 @@
 ---
-name: Feature Request
-about: Suggest a new script idea or gallery feature
-title: "[FEATURE] "
+name: Feature Request / Script Idea
+about: Suggest an idea for a new script or feature in the gallery
+title: '[IDEA] '
 labels: enhancement
 assignees: ''
 ---
 
-## Script / Feature Description
-A clear description of what you'd like to see added.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-## Use Case
-Why would this be useful? What problem does it solve?
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Proposed Implementation
-If you have ideas on how this could work:
-- What APIs would it use?
-- What widget families should it support?
-- Any design mockups or references?
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-## Widget Preview (Optional)
-If you've sketched or prototyped the widget, share a screenshot or SASUP JSON snippet.
-
-## Additional Context
-Any other context, links, or references.
+**Additional context**
+Add any other context or screenshots about the feature request here.

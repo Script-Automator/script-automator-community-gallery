@@ -1,34 +1,29 @@
 ---
 name: Bug Report
-about: Report a bug in a community script
-title: "[BUG] "
+about: Report an issue with a community script or the repository structure
+title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## Script Info
-- **Script ID:** 
-- **Script Version:** 
-- **Category:** 
-
-## Bug Description
+**Describe the bug**
 A clear and concise description of what the bug is.
 
-## Steps to Reproduce
-1. Install the script from the Gallery
-2. Run the script
-3. See error in console / widget not rendering
+**Which script is failing?**
+Specify the category and the `id` of the script from the gallery.
 
-## Expected Behavior
-What you expected to happen.
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Import script '...'
+2. Run script '...'
+3. See error '...'
 
-## Actual Behavior
-What actually happened.
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-## Screenshots
-If applicable, add screenshots of the widget or console output.
+**Device Info (please complete the following information):**
+ - OS: [e.g. iOS 17, Android 13]
+ - App Version: [e.g. v1.0.0]
 
-## Environment
-- **Device:** (e.g., iPhone 15 Pro, Pixel 8)
-- **OS Version:** (e.g., iOS 18.0, Android 15)
-- **App Version:** (e.g., 1.0.0 build 42)
+**Additional context**
+Add any other context about the problem here.

@@ -1,0 +1,19 @@
+# Script Automator Community Gallery CODEOWNERS
+# Assigns reviewers automatically for pull requests.
+
+# Default maintainers
+*       @chngysmine
+
+# Script category specific approvers (examples for future expansion)
+/scripts/weather/         @chngysmine
+/scripts/finance/         @chngysmine
+/scripts/productivity/    @chngysmine
+/scripts/utilities/       @chngysmine
+/scripts/ai/              @chngysmine
+/scripts/games/           @chngysmine
+
+# Core architecture and CI
+/.github/                 @chngysmine
+/metadata.schema.json     @chngysmine
+/index.json               @chngysmine
+/AGENTS.md                @chngysmine

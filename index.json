@@ -98,7 +98,13 @@
       "medium",
       "large"
     ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "authorUrl": "https://github.com/script-automator-community",
     "isFeatured": true,
+    "createdAt": "2026-03-10T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
     "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/weather/weather_pro/weather_pro.js"
   },
   {
@@ -118,7 +124,13 @@
       "small",
       "medium"
     ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "authorUrl": "https://github.com/cryptodevs",
     "isFeatured": false,
+    "createdAt": "2026-03-12T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
     "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/finance/crypto_portfolio/crypto_portfolio.js"
   },
   {
@@ -138,7 +150,13 @@
       "small",
       "medium"
     ],
+    "minAppVersion": "1.0.0",
+    "license": "MIT",
+    "screenshots": [],
+    "authorUrl": "https://github.com/script-automator-community",
     "isFeatured": false,
+    "createdAt": "2026-03-14T00:00:00Z",
+    "updatedAt": "2026-04-01T00:00:00Z",
     "scriptUrl": "https://raw.githubusercontent.com/chngysmine/script-automator-community-gallery/main/scripts/utilities/system_monitor/system_monitor.js"
   }
 ]

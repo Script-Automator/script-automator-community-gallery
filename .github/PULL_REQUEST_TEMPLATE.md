@@ -1,19 +1,18 @@
-## Script Submission Checklist
+## Summary
+Please provide a brief description of the script and what it does. Also include the link to any relevant issue.
 
-Before submitting a PR for a new script, verify:
-- [ ] Only standard JavaScript ES6+ features used (no node modules, no `require()`).
-- [ ] No remote code execution (e.g., `eval()`, `new Function()`).
-- [ ] Network requests ONLY use the provided `fetch()` polyfill context.
-- [ ] Follows UI constraints: Native JSON Passthrough components or basic primitive tags.
-- [ ] `metadata.json` is provided and passes JSON schema validation.
+## Checklist
+- [ ] `metadata.json` is valid and complete with all required fields.
+- [ ] Script runs without errors in the Script Automator app.
+- [ ] Widget renders correctly on at least one specified widget family size.
+- [ ] No external requests to private/local networks.
+- [ ] Code follows the style guide and is not obfuscated.
+- [ ] Included screenshots in the `screenshots/` directory.
 
-## Changes Proposed
-- (List script intent and widget UI goals)
+## Testing Details
+- **iOS version tested:** [e.g., iOS 17.2]
+- **Android version tested:** [e.g., Android 14]
+- **App version tested:** [e.g., v1.0.0]
 
-## Testing
-- [ ] Tested on iOS (JavaScriptCore)
-- [ ] Tested on Android (QuickJS)
-- [ ] Live preview renders successfully in Script Automator editor.
-
-## Screenshots / Screen Recordings
-(Attach visuals of the widget output here)
+## Screenshots
+<!-- Add your widget preview screenshots here -->
